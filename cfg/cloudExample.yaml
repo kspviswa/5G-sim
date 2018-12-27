@@ -1,0 +1,15 @@
+---
+
+name: TampaDC
+region: region1
+infra:
+    vcpu: 16
+    ram: 17179869184 # 16GB
+    hdd: 10737418240 # 10GB
+network:
+    IPs:
+        - 10.10.2.1
+        - fe:23:45:43
+    HPAs:
+        - dpdk
+        - sriov

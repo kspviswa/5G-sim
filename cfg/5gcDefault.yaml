@@ -1,0 +1,297 @@
+---
+
+# Configures a basic 5GC with all relevant network functions
+
+eir:
+  name: eir
+  desp: 5G Equipment Identity Register
+  infra:
+    ram: 17179869184
+    vcpu: 8
+    hdd: 107374182400
+  network:
+    IP: 10.10.10.1
+  cardinality: 1
+  isDataplane: false
+  numSessions: 100
+  category: core
+
+amf:
+  name: amf
+  desp: Access & Mobility Management Function
+  infra:
+    ram: 17179869184
+    vcpu: 16
+    hdd: 107374182400
+  network:
+    IP: 10.10.10.2
+  cardinality: 1
+  isDataplane: false
+  numSessions: 1000
+  category: core
+
+af:
+  name: af
+  desp: Application Function
+  infra:
+    ram: 17179869184
+    vcpu: 8
+    hdd: 107374182400
+  network:
+    IP: 10.10.10.3
+  cardinality: 50
+  isDataplane: false
+  numSessions: 100
+  category: core
+
+ausf:
+  name: ausf
+  desp: Authentication Server Function
+  infra:
+    ram: 17179869184
+    vcpu: 16
+    hdd: 107374182400
+  network:
+    IP: 10.10.10.4
+  cardinality: 1
+  isDataplane: false
+  numSessions: 100
+  category: core
+
+bsf:
+  name: bsf
+  desp: Binding Support Function
+  infra:
+    ram: 17179869184
+    vcpu: 8
+    hdd: 107374182400
+  network:
+    IP: 10.10.10.5
+  cardinality: 1
+  isDataplane: false
+  numSessions: 100
+  category: core
+
+chf:
+  name: chf
+  desp: Charging Function
+  infra:
+    ram: 17179869184
+    vcpu: 8
+    hdd: 107374182400
+  network:
+    IP: 10.10.10.6
+  cardinality: 1
+  isDataplane: false
+  numSessions: 100
+  category: core
+
+gmlc:
+  name: gmlc
+  desp: Gateway Mobile Location Center
+  infra:
+    ram: 17179869184
+    vcpu: 8
+    hdd: 107374182400
+  network:
+    IP: 10.10.10.7
+  cardinality: 1
+  isDataplane: false
+  numSessions: 100
+  category: core
+
+lmf:
+  name: lmf
+  desp: Location Management Function
+  infra:
+    ram: 17179869184
+    vcpu: 8
+    hdd: 107374182400
+  network:
+    IP: 10.10.10.8
+  cardinality: 1
+  isDataplane: false
+  numSessions: 100
+  category: core
+
+gnb:
+  name: gnb
+  desp: gNodeB
+  infra:
+    ram: 17179869184
+    vcpu: 8
+    hdd: 107374182400
+  network:
+    IP: 10.10.10.9
+  cardinality: 100
+  isDataplane: false
+  numSessions: 100
+  category: core
+
+nwdaf:
+  name: nwdaf
+  desp: Network Data Analytics Function
+  infra:
+    ram: 17179869184
+    vcpu: 8
+    hdd: 107374182400
+  network:
+    IP: 10.10.10.10
+  cardinality: 50
+  isDataplane: false
+  numSessions: 100
+  category: core
+
+nef:
+  name: nef
+  desp: Network Exposure Function
+  infra:
+    ram: 17179869184
+    vcpu: 8
+    hdd: 107374182400
+  network:
+    IP: 10.10.10.11
+  cardinality: 1
+  isDataplane: false
+  numSessions: 100
+  category: core
+
+nrf:
+  name: nrf
+  desp: Network Repository Function
+  infra:
+    ram: 17179869184
+    vcpu: 8
+    hdd: 107374182400
+  network:
+    IP: 10.10.10.12
+  cardinality: 50
+  isDataplane: false
+  numSessions: 100
+  category: core
+
+nssf:
+  name: nssf
+  desp: Network Slice Selection Function
+  infra:
+    ram: 17179869184
+    vcpu: 8
+    hdd: 107374182400
+  network:
+    IP: 10.10.10.13
+  cardinality: 50
+  isDataplane: false
+  numSessions: 100
+  category: core
+
+n3iwf:
+  name: n3iwf
+  desp: Non 3GPP Interworking Function
+  infra:
+    ram: 17179869184
+    vcpu: 8
+    hdd: 107374182400
+  network:
+    IP: 10.10.10.14
+  cardinality: 1
+  isDataplane: false
+  numSessions: 100
+  category: core
+
+pcf:
+  name: pcf
+  desp: Policy Control Function
+  infra:
+    ram: 17179869184
+    vcpu: 8
+    hdd: 107374182400
+  network:
+    IP: 10.10.10.15
+  cardinality: 50
+  isDataplane: false
+  numSessions: 100
+  category: core
+
+smf:
+  name: smf
+  desp: Session Management Function
+  infra:
+    ram: 17179869184
+    vcpu: 8
+    hdd: 107374182400
+  network:
+    IP: 10.10.10.16
+  cardinality: 50
+  isDataplane: false
+  numSessions: 100
+  category: core
+
+smsf:
+  name: smsf
+  desp: Short Message Service Function
+  infra:
+    ram: 17179869184
+    vcpu: 8
+    hdd: 107374182400
+  network:
+    IP: 10.10.10.17
+  cardinality: 10
+  isDataplane: false
+  numSessions: 100
+  category: core
+
+udm:
+  name: udm
+  desp: User Data Management Function
+  infra:
+    ram: 17179869184
+    vcpu: 8
+    hdd: 107374182400
+  network:
+    IP: 10.10.10.18
+  cardinality: 100
+  isDataplane: false
+  numSessions: 100
+  category: core
+
+udr:
+  name: udr
+  desp: User Data Respository Function
+  infra:
+    ram: 17179869184
+    vcpu: 8
+    hdd: 107374182400
+  network:
+    IP: 10.10.10.19
+  cardinality: 50
+  isDataplane: false
+  numSessions: 100
+  category: core
+
+upf:
+  name: upf
+  desp: User Plane Function
+  infra:
+    ram: 17179869184
+    vcpu: 8
+    hdd: 107374182400
+  network:
+    IP: 10.10.10.20
+  cardinality: 100
+  isDataplane: true
+  numSessions: 1000
+  category: core
+
+rnc:
+  name: rnc
+  desp: Radio Network Controller
+  infra:
+    ram: 17179869184
+    vcpu: 8
+    hdd: 107374182400
+  network:
+    IP: 10.10.10.21
+  cardinality: 100
+  isDataplane: false
+  numSessions: 100
+  category: ran

@@ -1,0 +1,6 @@
+---
+
+name: RAN-A
+latency: 100 # 100 ms
+numRAB: 100
+spectrum: 61.34 # 61.34GHz unlicensed mmwave
