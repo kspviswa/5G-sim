@@ -20,8 +20,9 @@ type command struct {
 }
 
 type cli struct {
-	prompt string
-	cmdmap map[string]*command
+	prompt  string
+	cmdmap  map[string]*command
+	scmdmap map[string]string
 }
 
 func (c *cli) doprompt() {
@@ -32,11 +33,16 @@ func (c *cli) doprompt() {
 func (c *cli) addCommand(cmd *command) error {
 	if cmd != nil {
 		c.cmdmap[cmd.name] = cmd
+		c.scmdmap[cmd.sname] = cmd.name
 	}
 	return nil
 }
 
 func (c *cli) evaluatecmd(cmdstr string) (*command, bool) {
+	maincmdstr, ok := c.scmdmap[cmdstr]
+	if ok {
+		cmdstr = maincmdstr
+	}
 	cmd, ok := c.cmdmap[cmdstr]
 	return cmd, ok
 }
@@ -48,6 +54,7 @@ func (c *cli) processCommand(cmd *command) error {
 
 func (c *cli) initMemory() error {
 	c.cmdmap = make(map[string]*command)
+	c.scmdmap = make(map[string]string)
 	return nil
 }
 
